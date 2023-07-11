@@ -1,0 +1,36 @@
+<h3>Using Rxjs</h3>
+<hr />
+<ul class="list-group">
+  <li class="list-group-item">
+    Contador$ Rxjs pipe async: {{ contador$ | async }}
+  </li>
+  <li class="list-group-item">
+    Contador2$ Rxjs pipe async: {{ contador2$ | async }}
+  </li>
+  <li class="list-group-item">Contador-Rxjs-value: {{ contador$.value }}</li>
+  <li class="list-group-item">
+    Contador$ Rxjs GetValue: {{ contador$.getValue() }}
+  </li>
+  <li class="list-group-item">
+    Dobro Contador$ Rxjs: {{ dobroContator$ | async }}
+  </li>
+  <li class="list-group-item">
+    Soma Contador$ + Contador2$: {{ somaContator$ | async }}
+  </li>
+  <li class="list-group-item">
+    Soma Contador$ + Contador2$: {{ somaContator$ | async }}
+  </li>
+  <li class="list-group-item">
+    Soma Contador$ + Contador2$: {{ somaContator$ | async }}
+  </li>
+  <li class="list-group-item">
+    Soma Contador$ + Contador2$: {{ somaContator$ | async }}
+  </li>
+  <li class="list-group-item">
+    Soma Contador$ + Contador2$: {{ somaContator$ | async }}
+  </li>
+</ul>
+
+<button type="button" class="btn btn-primary" (click)="rxjsChanges()">
+  Rxjs
+</button>

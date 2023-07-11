@@ -1,0 +1,14 @@
+<h3>Using Signals</h3>
+<hr />
+<ul class="list-group">
+  <li class="list-group-item">Contador signal: {{ contador() }}</li>
+  <li class="list-group-item">Contador2 signal: {{ contador2() }}</li>
+  <li class="list-group-item">Dobro Contador signal: {{ dobroContator() }}</li>
+  <li class="list-group-item">
+    Soma Contador + Contador2: {{ somaContator() }}
+  </li>
+</ul>
+
+<button type="button" class="btn btn-primary" (click)="signalChanges()">
+  Signals
+</button>
