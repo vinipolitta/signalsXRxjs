@@ -8,6 +8,9 @@ import { RxjsComponent } from './components/rxjs/rxjs.component';
 import { ToDoListComponent } from './components/to-do-list/to-do-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { ApresentacaoComponent } from './components/apresentacao/apresentacao.component';
+import { OneComponent } from './components/apresentacao/one/one.component';
+import { TwoComponent } from './components/apresentacao/two/two.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { UserListComponent } from './components/user-list/user-list.component';
     SignalsComponent,
     RxjsComponent,
     ToDoListComponent,
-    UserListComponent
+    UserListComponent,
+    ApresentacaoComponent,
+    OneComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule,

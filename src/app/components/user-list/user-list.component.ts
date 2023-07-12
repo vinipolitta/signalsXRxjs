@@ -52,16 +52,6 @@ export class UserListComponent implements OnInit {
     this.form.reset();
   }
 
-  markuserAsCompleted(user: User) {
-    this.users.mutate((users) => {
-      const userIndex = users.indexOf(user);
-
-      const userMarkedAsCompleted: User = { ...user, newUser: true };
-
-      users.splice(userIndex, 1, userMarkedAsCompleted);
-    });
-  }
-
   removeUser(user: User) {
     this.users.mutate((users) => {
       const userIndex = users.indexOf(user);
@@ -71,7 +61,7 @@ export class UserListComponent implements OnInit {
 
   saveUsersInStorage() {
     if (this.users()) {
-      window.localStorage.setItem("tasks", JSON.stringify(this.users()));
+      window.localStorage.setItem("user", JSON.stringify(this.users()));
     }
   }
 
