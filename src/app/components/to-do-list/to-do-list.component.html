@@ -1,0 +1,39 @@
+<input
+  type="text"
+  placeholder="Type a task name"
+  [formControl]="taskControl"
+  (keydown.enter)="addTask()"
+/>
+
+<h3>Tasks To Do</h3>
+
+<ng-container *ngIf="hasUncompletedTasks(); else noTasks">
+  <ul>
+    <ng-container *ngFor="let item of uncompletedTasks()">
+      <li class="item">
+        <strong>{{ item.title }}</strong>
+        <button (click)="markTaskAsCompleted(item)">Mark as completed</button>
+        <button (click)="removeTask(item)">Remove</button>
+      </li>
+    </ng-container>
+  </ul>
+</ng-container>
+
+<h3>Completed Tasks</h3>
+
+<ng-container *ngIf="hasCompletedTasks(); else noTasks">
+  <ul>
+    <ng-container *ngFor="let item of completedTasks()">
+      <li class="item completed">
+        <strong>{{ item.title }}</strong>
+        <button (click)="removeTask(item)">Remove</button>
+      </li>
+    </ng-container>
+  </ul>
+</ng-container>
+
+<ng-template #noTasks>
+  <div>
+    <span>There are no tasks to show here</span>
+  </div>
+</ng-template>
