@@ -10,6 +10,7 @@ export class SignalsComponent implements OnInit {
   public contador = signal(10);
   public contador2 = signal(10);
 
+  //COMPUTED UMA FUNCAO DO SIGNALS ONDE CONSEGUIMOS RETORNAR O VALOR DE UMA DETERMINADA LOGICA, ONDE FICA ESCUTANDO SE TEM MUDANÇA OU NAO
   public somaContator = computed(() => this.contador() + this.contador2())
   public dobroContator = computed(() => this.contador() * 2);
 

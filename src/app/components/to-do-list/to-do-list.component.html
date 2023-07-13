@@ -7,6 +7,7 @@
 
 <h3>Tasks To Do</h3>
 
+<!-- onde valido e mostro na tela se nao tem task completa senao mostra NoTasks -->
 <ng-container *ngIf="hasUncompletedTasks(); else noTasks">
   <ul>
     <ng-container *ngFor="let item of uncompletedTasks()">
@@ -21,6 +22,7 @@
 
 <h3>Completed Tasks</h3>
 
+<!-- onde valido e mostro na tela se tem task completa senao mostra NoTasks -->
 <ng-container *ngIf="hasCompletedTasks(); else noTasks">
   <ul>
     <ng-container *ngFor="let item of completedTasks()">
